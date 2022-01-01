@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "plumber-auth": {
+      "hosting": {
+        "firebase-auth-example": [
+          "plumber-auth"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "plumber-auth"
+  }
+}

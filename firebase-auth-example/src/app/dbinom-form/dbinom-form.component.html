@@ -1,0 +1,20 @@
+<table cellspacing="0" class="card"><tr>
+    <td><mat-form-field appearance="fill">
+      <mat-label>Number of heads</mat-label>
+      <input matInput type="number" [(ngModel)]="dbinomParms.successes">
+    </mat-form-field></td>
+    <td><mat-form-field appearance="fill">
+      <mat-label>Number of trials</mat-label>
+      <input matInput type="number" [(ngModel)]="dbinomParms.size">
+    </mat-form-field></td>
+    <td><mat-form-field appearance="fill">
+      <mat-label>Heads probability</mat-label>
+      <input matInput type="number" [(ngModel)]="dbinomParms.p">
+    </mat-form-field></td>
+  </tr>
+</table>
+<div class="card">
+    <button mat-raised-button (click)="getProbability()">Compute probability</button>
+    <mat-divider style="margin: 10px"></mat-divider>
+    <p *ngIf="probability | async as p">The overall probability of {{ dbinomParms.successes }} heads with these paramers was: {{ p }}</p>
+</div>

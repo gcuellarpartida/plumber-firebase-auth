@@ -1,0 +1,9 @@
+<div class="card">
+    <button (click)="login()" mat-raised-button *ngIf="!authService.currentUser">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" style="margin-right: 2px;">
+        Login with google
+    </button>
+    <button (click)="logout()" mat-raised-button *ngIf="authService.currentUser">
+        Logout
+    </button>
+</div>
